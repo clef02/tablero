@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { VistaRoutingModule } from './vista-routing.module';
 import { HomeComponent } from './home/home.component';
-import { RelogService } from '../shared/relog.service';
+
 import { FormsModule } from '@angular/forms';
 
 
@@ -19,8 +19,5 @@ import { FormsModule } from '@angular/forms';
   exports: [
     HomeComponent
   ],
-  providers: [
-    RelogService
-  ]
 })
 export class VistaModule { }
