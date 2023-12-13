@@ -1,0 +1,44 @@
+
+<div class="card">
+    <div class="card_1">
+        <div class="card_til">
+            <h2>TIEMPO</h2>          
+        </div>
+    
+        <div class="card_text">
+            <span class="text">{{ minutos | number: '2.0' }}</span>
+            <span class="text">:</span>
+            <span class="text">{{ segundos | number: '2.0' }}</span>
+        </div>
+    </div>
+    <div class="card_gol">
+        <div class="card_equip1">
+            <div class="wave-group">
+                <textarea id="texto"  class="input" (input)="convertir()" [(ngModel)]="texto"></textarea>    
+            </div>
+            <span class="text"> {{ gol1 }} </span>            
+        </div>
+        <div class="card_equip3">
+            <h2>PERIODO</h2>
+            <span class="text1">{{ periodo }}</span>
+        </div>
+        <div class="card_equip2">
+                <div class="wave-group">
+                    <textarea  id="texto"  [(ngModel)]="texto1"  (input)="convertir1()"  class="input"></textarea>    
+                </div>
+            <span class="text"> {{ gol2 }} </span>     
+        </div>
+
+    </div>
+
+</div>
+<div>
+
+</div>
+
+
+
+<div class="conteiner">
+    <div (keydown)="hand($event)" tabindex="0">
+    </div>
+</div>
