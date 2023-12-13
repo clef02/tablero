@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RelogService } from './shared/relog.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +11,6 @@ import { RelogService } from './shared/relog.service';
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],
-  providers: [
-    RelogService
   ],
   bootstrap: [AppComponent]
 })
