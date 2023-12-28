@@ -55,7 +55,27 @@
 }
 .text1{
     color: red;
-    font-size: 10rem;
+    font-size: 12rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    border-top: 4px solid white ;
+    border-right: 4px solid white ;
+}
+.text2{
+    color: rgb(255, 247, 10);
+    font-size: 14rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    border-top: 4px solid white ;
+    border-right: 4px solid white ;
 }
 .wave-group {
     position: relative;
