@@ -1,38 +1,55 @@
 
 <div class="card">
     <div class="card_1">
-        <div class="card_til">
-            <h2>TIEMPO</h2>          
-        </div>
     
-        <div class="card_text">
+        <!-- <div class="card_text">
             <span class="text">{{ minutos | number: '2.0' }}</span>
             <span class="text">:</span>
             <span class="text">{{ segundos | number: '2.0' }}</span>
+        </div> -->
+        <div class="card_equip3">
+            <h2>PERIODO</h2>
+            <span class="card_equip3_1">{{ periodo }}</span>
         </div>
+        <h1 class="relative top-10 text-center text-white text-9xl">VS</h1>
     </div>
     <div class="card_gol">
         <div class="card_equip1">
             <div class="wave-group">
                 <textarea id="texto"  class="input" (input)="convertir()" [(ngModel)]="texto"></textarea>    
             </div>
-            <span class="text"> {{ gol1 }} </span>            
+            <span [style.color]="color2" class="text1"> {{ gol1 }} </span>  
+            <input class="appearance-none bg-transparent w-96 border-none border-transparent cursor-pointer" type="color" [(ngModel)]="color2">
+            
+            <div class="card_equip1_falta1">
+                <h2>Falta</h2>
+                <span [style.color]="color2" class="card_equip3_1">{{falta1}}</span>
+            </div>       
         </div>
-        <div class="card_equip3">
-            <h2>PERIODO</h2>
-            <span class="text1">{{ periodo }}</span>
+        <div class="card_text">
+            <span class="text">{{ minutos | number: '2.0' }}</span>
+            <span class="text">:</span>
+            <span class="text">{{ segundos | number: '2.0' }}</span>
         </div>
         <div class="card_equip2">
                 <div class="wave-group">
                     <textarea  id="texto"  [(ngModel)]="texto1"  (input)="convertir1()"  class="input"></textarea>    
                 </div>
-            <span class="text"> {{ gol2 }} </span>     
-        </div>
+            <span [style.color]="color1" class="text2"> {{ gol2 }} </span> 
+            <input class="appearance-none bg-transparent w-96 border-none border-transparent cursor-pointer" type="color" [(ngModel)]="color1">
+            
+            <div class="card_equip2_falta">
+                <h2>Falta</h2>
+                <span [style.color]="color1" class="card_equip3_1">{{falta2}}</span>
 
+            </div>   
+        </div>
     </div>
 
 </div>
 <div>
+    
+
 
 </div>
 

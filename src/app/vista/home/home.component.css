@@ -14,20 +14,32 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #222121;
+
 }
 .card_1{
-    text-align: center;
     position: relative;
-    top: 270px;
+    top: 300px;
+}
+.card_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 3px solid white;
+    height: 250px;
+    margin-top: 300px;
+    width: 650px;
 }
 .card_til{
     position: relative;
     top: 100px;
+    margin: 40px;
 }
 .card h2{
     color: red;
-    font-size: 7rem;
+    font-size: 9rem;
+
 }
 .text{
     color: red;
@@ -36,44 +48,77 @@
 .card_gol{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 600px;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 400px;
+    margin-bottom: 350px;
 }
 .card_equip1,.card_equip2,.card_equip3{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
-.card_equip3{
-    position: absolute;
-    top: 500px;
+.card_equip1_falta1{
+    margin-top: 100px;
+}
+.card_equip1_falta1 h2{
+    position: relative;
+    top: 50px;
+    color: white;
+    font-weight:600;
+    font-size: 2rem;
+}
+.card_equip2_falta{
+    margin-top: 100px;
+}
+.card_equip2_falta h2{
+    position: relative;
+    top: 50px;
+    color: white;
+    font-weight:600;
+    font-size: 2rem;
 }
 .card_equip3 h2{
-    font-size: 3rem;
+    position: relative;
+    top: 50px;
+    color: white;
+    font-weight:600 ;
+    font-size: 2rem;
+}
+.card_equip3_1{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: black;
+    border: 3px solid white;
+    font-size: 10rem;
+    height: 150px;
+    width: 150px;
 }
 .text1{
     color: red;
-    font-size: 12rem;
+    font-size: 16rem;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 400px;
-    height: 200px;
+    height: 250px;
     border-top: 4px solid white ;
     border-right: 4px solid white ;
 }
 .text2{
     color: rgb(255, 247, 10);
-    font-size: 14rem;
+    font-size: 16rem;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 400px;
-    height: 200px;
+    height: 250px;
     border-top: 4px solid white ;
     border-right: 4px solid white ;
 }
@@ -83,13 +128,14 @@
 
 .wave-group .input {
   text-align: center;
-  color: red;
-  font-size: 40px;
+  color: white;
+  font-size: 70px;
   padding: 10px 10px 10px 5px;
   display: block;
+  font-weight: 600;
   border: none;
-  width: 250px;
-  height: 200px;
+  width: 500px;
+  height: 100px;
   resize: none;
   overflow: hidden;
   border-bottom: 1px solid #515151;
@@ -99,4 +145,4 @@
 .wave-group .input:focus {
   outline: none;
 }
-  
+

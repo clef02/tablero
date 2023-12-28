@@ -7,6 +7,8 @@ import { Component,HostListener} from '@angular/core';
 })
 export class HomeComponent{
 
+   color1:string ='#000000';
+   color2:string ='#000000';
 
    minutos:number = 0;
    segundos: number = 0;
@@ -18,7 +20,15 @@ export class HomeComponent{
    periodo:number = 1;
    texto:string = '';
    texto1:string = '';
+   falta1:number = 0;
+   falta2:number = 0;
 
+   Faltas1(){
+    this.falta1 += 1;
+   }
+   Faltas2(){
+    this.falta2 += 1;
+   }
    convertir(){
     this.texto = this.texto.toUpperCase();
    }
@@ -37,7 +47,14 @@ export class HomeComponent{
    perio(){
     this.periodo += 1;
    }
+  
 
+   cambiaColor(colorN:string){
+      this.color1 = colorN;
+   }
+   cambiaColor2(colorN:string){
+      this.color2 = colorN;
+   }
 
    incremet(type: 'm' | 's' ){
      if (type === 'm'){
@@ -58,7 +75,7 @@ export class HomeComponent{
         case 'ArrowUp':
           this.incremet('m')
           break;
-        case 'Shift':
+        case 'Alt':
           this.stop()
           break;
         case '0':
@@ -73,7 +90,12 @@ export class HomeComponent{
         case '3':
           this.perio()
           break;
-
+        case '4':
+          this.Faltas1()
+          break;
+        case '5':
+          this.Faltas2()
+          break;
       }
    }
 
