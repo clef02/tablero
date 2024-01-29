@@ -75,6 +75,9 @@ export class HomeComponent{
    perio(){
     this.periodo += 1;
    }
+   perioDec(){
+    this.periodo -= 1;
+   }
   
 
    cambiaColor(colorN:string){
@@ -128,10 +131,13 @@ export class HomeComponent{
         case '3':
           this.perio()
           break;
+        case 'c':
+          this.perioDec()
+          break;
         case '4':
           this.Faltas1()
           break;
-        case 'c':
+        case 'b':
           this.Faltas1Dec()
           break;
         case '5':
