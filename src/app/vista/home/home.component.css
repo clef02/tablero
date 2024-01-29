@@ -4,9 +4,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Chakra Petch', sans-serif;
 }
-
+@font-face {
+    font-family:"FX-LED Bold.TTF";
+    src: url("utils/FX-LED Bold.TTF");
+}
+@font-face {
+    font-family:"Montserrat-Regular.ttf";
+    src: url("utils/Montserrat-Regular.ttf");
+}
 .card{
     display: flex;
     align-items: center;
@@ -15,11 +21,10 @@
     width: 100%;
     height: 100vh;
     background-color: #222121;
-
 }
 .card_1{
     position: relative;
-    top: 300px;
+    top: 350px;
 }
 .card_text{
     display: flex;
@@ -27,9 +32,9 @@
     justify-content: center;
     background-color: black;
     border: 3px solid white;
-    height: 250px;
+    height: 200px;
+    width: 530px;
     margin-top: 300px;
-    width: 650px;
 }
 .card_til{
     position: relative;
@@ -38,19 +43,23 @@
 }
 .card h2{
     color: red;
-    font-size: 9rem;
+    font-size: 2rem;
 
 }
 .text{
     color: red;
-    font-size: 15rem;
+    font-size: 14rem;
+    font-family:"FX-LED Bold.TTF";
+    src: url("utils/FX-LED Bold.TTF");
 }
 .card_gol{
-    width: 100%;
+    position: relative;
+    top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 350px;
+    margin-bottom: 430px;
+
 }
 .card_equip1,.card_equip2,.card_equip3{
     display: flex;
@@ -97,10 +106,15 @@
     font-size: 10rem;
     height: 150px;
     width: 150px;
+    font-family:"FX-LED Bold.TTF";
+    src: url("utils/FX-LED Bold.TTF");
+    
 }
 .text1{
+    font-family:"FX-LED Bold.TTF";
+    src: url("utils/FX-LED Bold.TTF");
     color: red;
-    font-size: 16rem;
+    font-size: 21rem;
     background-color: black;
     display: flex;
     align-items: center;
@@ -111,8 +125,10 @@
     border-right: 4px solid white ;
 }
 .text2{
+    font-family:"FX-LED Bold.TTF";
+    src: url("utils/FX-LED Bold.TTF");
     color: rgb(255, 247, 10);
-    font-size: 16rem;
+    font-size: 21rem;
     background-color: black;
     display: flex;
     align-items: center;
@@ -129,16 +145,18 @@
 .wave-group .input {
   text-align: center;
   color: white;
-  font-size: 70px;
+  font-size: 60px;
+  font-weight: 800;
+  font-family: "Montserrat-Regular.ttf";
+  src: url("utils/Montserrat-Regular.ttf");
   padding: 10px 10px 10px 5px;
   display: block;
-  font-weight: 600;
   border: none;
   width: 500px;
   height: 100px;
   resize: none;
   overflow: hidden;
-  border-bottom: 1px solid #515151;
+  border-bottom:transparent;
   background: transparent;
 }
 

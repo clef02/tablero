@@ -7,6 +7,22 @@ import { Component,HostListener} from '@angular/core';
 })
 export class HomeComponent{
 
+  letraintro1: string = '';
+  letraintro2: string = '';
+
+  ajustarTama(hor:number) {
+    const letra = hor === 1 ? this.letraintro1 : this.letraintro2;
+    const tama = letra.length;
+    this.letraintro1 = this.letraintro1.toUpperCase()
+    this.letraintro2 = this.letraintro2.toUpperCase()
+    const inputElement = document.querySelector(`#input${hor}`) as HTMLInputElement;
+    if (inputElement) {
+      inputElement.style.width = `${tama * 30}px`;
+    }
+  }
+
+
+  
    color1:string ='#000000';
    color2:string ='#000000';
 
@@ -26,8 +42,14 @@ export class HomeComponent{
    Faltas1(){
     this.falta1 += 1;
    }
+   Faltas1Dec(){
+    this.falta1 -= 1;
+   }
    Faltas2(){
     this.falta2 += 1;
+   }
+   Faltas2Dec(){
+    this.falta2 -= 1;
    }
    convertir(){
     this.texto = this.texto.toUpperCase();
@@ -39,10 +61,16 @@ export class HomeComponent{
    conta1(){
      this.gol1 += 1;
    }
-
+   conta1Dec(){
+    this.gol1 -= 1;
+   }
    conta2(){
     this.gol2 += 1;
    }
+   conta2Dec(){
+    this.gol2 -= 1;
+   }
+
 
    perio(){
     this.periodo += 1;
@@ -66,6 +94,7 @@ export class HomeComponent{
      }
    }
 
+
   @HostListener('document:keydown', ['$event'])
    hand(event: KeyboardEvent){
       switch(event.key){
@@ -74,6 +103,9 @@ export class HomeComponent{
           break;
         case 'ArrowUp':
           this.incremet('m')
+          break;
+        case 'ArrowDown':
+          this.decremet('m')
           break;
         case 'Alt':
           this.stop()
@@ -84,8 +116,14 @@ export class HomeComponent{
         case '1':
           this.conta1() 
           break;
+        case 'z':
+          this.conta1Dec()
+          break;
         case '2':
           this.conta2()
+          break;
+        case 'x':
+          this.conta2Dec()
           break;
         case '3':
           this.perio()
@@ -93,8 +131,14 @@ export class HomeComponent{
         case '4':
           this.Faltas1()
           break;
+        case 'c':
+          this.Faltas1Dec()
+          break;
         case '5':
           this.Faltas2()
+          break;
+        case 'v':
+          this.Faltas2Dec()
           break;
       }
    }
@@ -141,10 +185,8 @@ export class HomeComponent{
 
   
    reset(){
-     this.minutos = 0;
-     this.segundos = 0;
-     this.gol1 = 0;
-     this.gol2 = 0;
+     this.falta1 = 0;
+     this.falta2 = 0;
    }
 
 
