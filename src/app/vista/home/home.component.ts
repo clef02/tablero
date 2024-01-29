@@ -137,13 +137,13 @@ export class HomeComponent{
         case '4':
           this.Faltas1()
           break;
-        case 'b':
+        case 'v':
           this.Faltas1Dec()
           break;
         case '5':
           this.Faltas2()
           break;
-        case 'v':
+        case 'b':
           this.Faltas2Dec()
           break;
       }
