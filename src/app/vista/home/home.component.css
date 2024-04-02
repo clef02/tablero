@@ -27,7 +27,12 @@
     position: relative;
 
 }
-
+.slider_bot button{
+    color: white;
+    margin-left: 10px;
+    width: 120px;
+    background-color: rgb(19, 0, 96);
+}
 
 .slider-container { 
     overflow-x: hidden;
