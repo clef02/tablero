@@ -1,0 +1,67 @@
+<div class="card">
+    <div class="card_til">
+        <h1 class="text-white">PENALTIS</h1>
+    </div>
+    <div class="card_circ">
+        <div class="wave-group1">
+            <textarea id="texto"  class="input1" (input)="convertir()" [(ngModel)]="texto" rows="2"></textarea>    
+        </div>
+        <label for="" class="text-white" [style.color]="color2">{{contador}}</label>
+        <div class="circ" [style.background-color]="backColor1">
+         
+        </div>
+        <div class="circ" [style.background-color]="backColor2">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor3">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor4">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor5">
+        </div>
+        <div *ngIf="visibCirc" class="circ_1" [style.background-color]="backColor11"></div>
+        <div *ngIf="visibCirc" class="circ_2" [style.background-color]="backColor12"></div>
+        <div *ngIf="visibCirc" class="circ_3" [style.background-color]="backColor13"></div>
+        <div *ngIf="visibCirc" class="circ_4" [style.background-color]="backColor14"></div>
+        <div *ngIf="visibCirc" class="circ_5" [style.background-color]="backColor15"></div>
+    </div>
+    <div class="card_circ1">
+        <div class="circ" [style.background-color]="backColor6">
+         
+        </div>
+        <div class="circ" [style.background-color]="backColor7">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor8">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor9">
+             
+        </div>
+        <div class="circ" [style.background-color]="backColor0">
+        
+        </div>
+        <div *ngIf="visibCirc1" class="circ1_1" [style.background-color]="backColor16">
+        </div>
+        <div *ngIf="visibCirc1" class="circ1_2" [style.background-color]="backColor17">
+        </div>
+        <div *ngIf="visibCirc1" class="circ1_3" [style.background-color]="backColor18">
+        </div>
+        <div *ngIf="visibCirc1" class="circ1_4" [style.background-color]="backColor19">
+        </div>
+        <div *ngIf="visibCirc1" class="circ1_5" [style.background-color]="backColor20">
+        </div> 
+        <div class="wave-group2">
+            <textarea id="texto"  class="input2" (input)="convertir1()" [(ngModel)]="texto1" rows="2"></textarea>    
+        </div>   
+        <label for="" class="count text-white" [style.color]="color1">{{ contador1 }}</label> 
+    </div>
+    <h1 class="creator">Creado Por:CLEVER FERNANDEZ HEREDIA</h1>
+</div>
+<div class="conteiner">
+    <div (keydown)="hand($event)" tabindex="0">
+    </div>
+</div>
+        

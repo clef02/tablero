@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="wave-group1">
+        <textarea id="texto"  class="input1" (input)="convertir()" [(ngModel)]="texto" rows="2"></textarea>    
+    </div>
+    <div class="card_text">
+        <span class="text">{{ minutos | number: '2.0' }}</span>
+        <span class="text">:</span>
+        <span class="text">{{ segundos | number: '2.0' }}</span>
+    </div>
+    <h1 class="creator">Creado Por: CLEVER FERNANDEZ HEREDIA</h1>
+</div>
+<div class="conteiner">
+    <div (keydown)="hand($event)" tabindex="0">
+    </div>
+</div>

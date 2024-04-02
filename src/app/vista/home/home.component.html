@@ -1,46 +1,65 @@
 
 <div class="card">
-    <div class="card_1">
-        <div class="card_equip3">
-            <h2>PERIODO</h2>
-            <span class="card_equip3_1">{{ periodo }}</span>
-            <h1 class="relative top-4 text-center text-white text-9xl">VS</h1>
+    <div class="slider1">
+        <div *ngIf="showInput"  class="slider_bot">
+            <input type="text" [(ngModel)]="newLetter" placeholder="Ingrese una letra">
+            <button (click)="addLetter()">Agregar letra</button>
         </div>
-        
+
+          <div class="slider-container">
+            <div class="slider">
+              <div *ngFor="let letter of letters; let i = index" class="slide">
+                <span>{{ letter }}</span>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="card_1">
+        <div *ngIf="ocultar" class="card_equip3">
+            <h2>PERIODO</h2>
+            <span class="card_equip3_1_1">{{ periodo }}</span>
+            <h1>VS</h1>
+        </div>
     </div>
     <div class="card_gol">
         <div class="card_equip1">
             <div class="wave-group">
-                <textarea id="texto"  class="input" (input)="convertir()" [(ngModel)]="texto"></textarea>    
+                <textarea id="texto"  class="input" (input)="convertir()" [(ngModel)]="texto" rows="2"></textarea>    
             </div>
             <span [style.color]="color2" class="text1"> {{ gol1 }} </span>  
             <input class="appearance-none bg-transparent w-96 border-none border-transparent cursor-pointer" type="color" [(ngModel)]="color2">
-            
-            <div class="card_equip1_falta1">
-                <h2>Falta</h2>
-                <span [style.color]="color2" class="card_equip3_1">{{falta1}}</span>
-            </div>       
+                <div  class="card_equip1_falta1">
+                    <h2>FALTAS</h2>
+                    <span [style.color]="color2" class="card_equip3_1">{{falta1}}</span>
+                </div>
+
         </div>
         <div class="card_text">
             <span class="text">{{ minutos | number: '2.0' }}</span>
             <span class="text">:</span>
             <span class="text">{{ segundos | number: '2.0' }}</span>
         </div>
+        <button (click)="transfData()" class="Button_penal">PENALTIS</button>
+        <div class="buttons_conta">
+            <button (click)="minut1Data()" [ngStyle]="{ 'background-color': buttonColor }" class="Button_minut1">Equipo 1 minuto</button>
+            <button (click)="minut2Data()" [ngStyle]="{ 'background-color': buttonColor1 }" class="Button_minut2">Equipo 2 minuto</button>
+        </div>
+
         <div class="card_equip2">
-                <div class="wave-group">
-                    <textarea  id="texto"  [(ngModel)]="texto1"  (input)="convertir1()"  class="input"></textarea>    
-                </div>
+            <div class="wave-group">
+                <textarea  id="texto"  [(ngModel)]="texto1"  (input)="convertir1()"  class="input"></textarea>    
+            </div>
             <span [style.color]="color1" class="text2"> {{ gol2 }} </span> 
             <input class="appearance-none bg-transparent w-96 border-none border-transparent cursor-pointer" type="color" [(ngModel)]="color1">
-            
             <div class="card_equip2_falta">
-                <h2>Falta</h2>
-                <span [style.color]="color1" class="card_equip3_1">{{falta2}}</span>
-
-            </div>   
+                <h2>FALTAS</h2>
+                <span  [style.color]="color1" class="card_equip3_1">{{falta2}}</span>
+            </div>                
         </div>
     </div>
-
+    <h1 class="creator">Creado Por: CLEVER FERNANDEZ HEREDIA</h1>
 </div>
 <div>
     
@@ -52,3 +71,4 @@
     <div (keydown)="hand($event)" tabindex="0">
     </div>
 </div>
+<router-outlet>

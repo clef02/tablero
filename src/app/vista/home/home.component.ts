@@ -1,4 +1,5 @@
 import { Component,HostListener} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,49 +8,203 @@ import { Component,HostListener} from '@angular/core';
 })
 export class HomeComponent{
 
-  letraintro1: string = '';
-  letraintro2: string = '';
+  constructor(private router:Router){
+    const storeA = localStorage.getItem('texto');
+    const storeB = localStorage.getItem('texto1');
+    const storeC = localStorage.getItem('minutos');
+    const storeD = localStorage.getItem('segundos');
+    const storeF = localStorage.getItem('faltas');
+    const storeG = localStorage.getItem('faltas1');
+    const storeH = localStorage.getItem('periodo');
+    const storeI = localStorage.getItem('gol');
+    const storeJ = localStorage.getItem('gol1');
+    const storeK = localStorage.getItem('color');
+    const storeL = localStorage.getItem('color1');
+    const storell = localStorage.getItem('bat');
+    const StoreColor = localStorage.getItem('buttonColor');
+    const StoreColor1 = localStorage.getItem('buttonColor1');
 
-  ajustarTama(hor:number) {
-    const letra = hor === 1 ? this.letraintro1 : this.letraintro2;
-    const tama = letra.length;
-    this.letraintro1 = this.letraintro1.toUpperCase()
-    this.letraintro2 = this.letraintro2.toUpperCase()
-    const inputElement = document.querySelector(`#input${hor}`) as HTMLInputElement;
-    if (inputElement) {
-      inputElement.style.width = `${tama * 30}px`;
+    if (storeA) {
+      this.texto = storeA;
+    }
+    if (storeB) {
+      this.texto1 = storeB;
+    }
+    if (storeC) {
+      this.minutos = +storeC;
+    }
+    if (storeD) {
+      this.segundos = +storeD;
+    }
+    if (storeF) {
+      this.falta1 = +storeF;
+    }
+    if (storeG) {
+      this.falta2 = +storeG;
+    }    
+    if (storeH) {
+      this.periodo = +storeH;
+    }
+    if (storeI) {
+      this.gol1 = +storeI;
+    }
+    if (storeJ) {
+      this.gol2 = +storeJ;
+    }
+    if (storeK) {
+      this.color1 = storeK;
+    }
+    if (storeL) {
+      this.color2 = storeL;
+    }
+    if (storell) {
+      this.newLetter = storell;
+    }
+    if (StoreColor) {
+      this.buttonColor = StoreColor;
+    }
+    if (StoreColor1) {
+      this.buttonColor1 = StoreColor1;
     }
   }
 
 
+  timeut:any;
+  colorbloc:string = 'black';
+  timeut2:any;
+  colorbloc2:string = 'black';
+  ocultar:boolean =true;
+  letters: string[] = [''];
+  newLetter: string = ''; 
+  showInput: boolean = true;
+  color1:string ='#000000';
+  color2:string ='#000000';
+  minutos:number = 0;
+  segundos: number = 0;
+  timer: any;
+  date = new Date();
+  disable: boolean = false;
+  gol1:number = 0;
+  gol2:number = 0;
+  periodo:number = 1;
+  texto:string = '';
+  texto1:string = '';
+  falta1:number = 0;
+  falta2:number = 0;
+  buttonColor:string = 'green';
+  buttonColor1:string = 'green';
   
-   color1:string ='#000000';
-   color2:string ='#000000';
+  
+  
+  OcultarFalta(){
+    this.ocultar = !this.ocultar;
+  }
 
-   minutos:number = 0;
-   segundos: number = 0;
-   timer: any;
-   date = new Date();
-   disable: boolean = false;
-   gol1:number = 0;
-   gol2:number = 0;
-   periodo:number = 1;
-   texto:string = '';
-   texto1:string = '';
-   falta1:number = 0;
-   falta2:number = 0;
+  addLetter() {
+    if (this.newLetter.trim() !== '') {
+      this.letters.push(this.newLetter.toUpperCase()); 
+      this.newLetter = ''; 
+      this.showInput = false;
+    }
+  }
 
+   transfData(){
+    this.router.navigate(['/penals'], {
+      queryParams:{
+        data1:this.texto,
+        data2:this.texto1,
+        contador1:this.gol1,
+        contador2:this.gol2,
+        color1:this.color1,
+        color2:this.color2,
+      }})
+    localStorage.setItem('texto',this.texto)
+   }
+
+
+   minut1Data(){
+    this.buttonColor = 'red'; 
+    this.stop();
+    this.router.navigate(['/minut1'], {
+      queryParams:{
+        data1:this.texto,
+      }})
+    localStorage.setItem('texto',this.texto),
+    localStorage.setItem('texto1',this.texto1),
+    localStorage.setItem('minutos',this.minutos.toString()),
+    localStorage.setItem('segundos',this.segundos.toString()),
+    localStorage.setItem('faltas',this.falta1.toString()),
+    localStorage.setItem('faltas1',this.falta2.toString()),
+    localStorage.setItem('periodo',this.periodo.toString()),
+    localStorage.setItem('gol',this.gol1.toString()),
+    localStorage.setItem('gol1',this.gol2.toString()),
+    localStorage.setItem('color',this.color1),
+    localStorage.setItem('color1',this.color2),
+    localStorage.setItem('bat',this.letters.toString()),
+    localStorage.setItem('buttonColor',this.buttonColor)
+   }
+   EliminarLo(){
+    localStorage.removeItem('texto'),
+    localStorage.removeItem('texto1'),
+    localStorage.removeItem('minutos'),
+    localStorage.removeItem('segundos'),
+    localStorage.removeItem('faltas'),
+    localStorage.removeItem('faltas1'),
+    localStorage.removeItem('periodo'),
+    localStorage.removeItem('gol'),
+    localStorage.removeItem('gol1')
+    localStorage.removeItem('color'),
+    localStorage.removeItem('color1'),
+    localStorage.removeItem('bat'),
+    localStorage.removeItem('buttonColor'),
+    localStorage.removeItem('buttonColor1')
+   }
+
+
+   minut2Data(){
+    this.stop();
+    this.buttonColor1 = 'red';
+    this.router.navigate(['/minut2'], {
+      queryParams:{
+        data2:this.texto1,
+      }})
+    localStorage.setItem('texto',this.texto),
+    localStorage.setItem('texto1',this.texto1),
+    localStorage.setItem('minutos',this.minutos.toString()),
+    localStorage.setItem('segundos',this.segundos.toString()),
+    localStorage.setItem('faltas',this.falta1.toString()),
+    localStorage.setItem('faltas1',this.falta2.toString()),
+    localStorage.setItem('periodo',this.periodo.toString()),
+    localStorage.setItem('gol',this.gol1.toString()),
+    localStorage.setItem('gol1',this.gol2.toString()),
+    localStorage.setItem('color',this.color1),
+    localStorage.setItem('color1',this.color2),
+    localStorage.setItem('bat',this.letters.toString()),
+    localStorage.setItem('buttonColor1',this.buttonColor1)
+   }
    Faltas1(){
-    this.falta1 += 1;
+    if (this.falta1 < 5) {
+      this.falta1+=1;
+    } else {
+      this.falta1 = 0;
+    }
    }
    Faltas1Dec(){
-    this.falta1 -= 1;
-   }
+    if (this.falta1 > 0) {
+      this.falta1 -= 1;
+    }
+  }
    Faltas2(){
-    this.falta2 += 1;
+    if (this.falta2 < 5) {
+      this.falta2 += 1;
+    } else {
+      this.falta2 = 0;
+    }
    }
    Faltas2Dec(){
-    this.falta2 -= 1;
+    if (this.falta2 > 0) {
+      this.falta2 -= 1;
+    }
    }
    convertir(){
     this.texto = this.texto.toUpperCase();
@@ -62,21 +217,31 @@ export class HomeComponent{
      this.gol1 += 1;
    }
    conta1Dec(){
-    this.gol1 -= 1;
+    if (this.gol1 > 0) {
+      this.gol1 -= 1;  
+    }
    }
    conta2(){
     this.gol2 += 1;
    }
    conta2Dec(){
-    this.gol2 -= 1;
+    if (this.gol2 > 0) {
+      this.gol2 -= 1;
+    }
    }
 
 
    perio(){
-    this.periodo += 1;
+      if (this.periodo < 4) {
+        this.periodo += 1;
+      } else {
+        this.periodo = 0;
+      }
    }
    perioDec(){
-    this.periodo -= 1;
+    if (this.periodo > 0) {
+      this.periodo -= 1;
+    }
    }
   
 
@@ -145,6 +310,9 @@ export class HomeComponent{
           break;
         case 'b':
           this.Faltas2Dec()
+          break;
+        case '6':
+          this.EliminarLo()
           break;
       }
    }
