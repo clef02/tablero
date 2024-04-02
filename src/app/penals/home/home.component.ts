@@ -216,18 +216,23 @@ export class HomeComponent {
       switch(event.key) {
         case '1':
           this.backColor1 = 'red';
+          event.preventDefault();
           break;
         case '2':
           this.backColor2 = 'red';
+          event.preventDefault();
           break;
         case '3':
           this.backColor3 = 'red';
+          event.preventDefault();
           break;
         case '4':
           this.backColor4 = 'red';
+          event.preventDefault();
           break;
         case '5':
           this.backColor5 = 'red';
+          event.preventDefault();
           break;
         case 'a':
           this.backColor6 = 'red';
