@@ -42,10 +42,7 @@
             <span class="text">{{ segundos | number: '2.0' }}</span>
         </div>
         <button (click)="transfData()" class="Button_penal">PENALTIS</button>
-        <div class="buttons_conta">
-            <button (click)="minut1Data()" [ngStyle]="{ 'background-color': buttonColor }" class="Button_minut1">Equipo 1 minuto</button>
-            <button (click)="minut2Data()" [ngStyle]="{ 'background-color': buttonColor1 }" class="Button_minut2">Equipo 2 minuto</button>
-        </div>
+
 
         <div class="card_equip2">
             <div class="wave-group">
@@ -59,7 +56,11 @@
             </div>                
         </div>
     </div>
-    <h1 class="creator">Creado Por: CLEVER FERNANDEZ HEREDIA</h1>
+    <button (click)="minut1Data()" [ngStyle]="{ 'background-color': buttonColor }" class="Button_minut1">Minuto</button>
+    <button (click)="minut2Data()" [ngStyle]="{ 'background-color': buttonColor1 }" class="Button_minut2">Minuto</button>
+    <div class="circ" *ngIf="redCircleVisible" [ngClass]="{'red-animation' : counterRed === 5}"></div>
+    <div class="circ1" *ngIf="redCircleVisible1" [ngClass]="{'red-animation' : counterRed1 === 5}"></div>
+    <h1 class="creator">DESARROLLADO POR: Clever Fernandez Heredia</h1>
 </div>
 <div>
     

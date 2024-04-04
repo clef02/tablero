@@ -26,11 +26,15 @@
     top: 250px;
     display: flex;
     align-items: center;
-    gap: 50px;
-    left: 50px;
+    gap: 30px;
+    left: 100px;
     background-color: transparent;
 }
 .card_circ .circ{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
     border-radius: 50%;
     border: 1px solid white;
     background-color:white;
@@ -50,6 +54,7 @@
     src: url("utils/FX-LED Bold.TTF");
     left: 550px;
 }
+
 .card_til{
     position: absolute;
     top: 380px;
@@ -61,16 +66,16 @@
 }
 .card_circ1{
     position: absolute;
-    left: 800px;
+    left: 0px;
     bottom: 10px;
     display: flex;
     background-color: transparent;
     flex-direction: row-reverse;
-    gap: 40px;
+    gap: 30px;
 }
 .card_circ1 label{
     position: absolute;
-    left: -190px;
+    left: 630px;
     bottom: 110px;
     line-height: 180px;
     font-size: 14rem;
@@ -83,12 +88,20 @@
 }
 
 .card_circ1 .circ{
+    display: flex;
+    flex-direction: column;
     margin-top: 200px;
     border-radius: 50%;
     border: 1px solid white;
     background-color:white;
     width: 100px;
     height: 100px;
+    position: relative;
+    left: 120px;
+    gap: 50px;
+}
+.circ button{
+    opacity: 0;
 }
 .circ_cont{
     display: flex;
@@ -96,87 +109,170 @@
 }
 .circ_1{
     top: 0px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid white;
     position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     background-color: white;
-    left: 790px;
+    left: 690px;
+    gap: 50px;
+}
+.circ_1 button{
+    opacity: 0;
 }
 .circ_2{
+    display: flex;
+    flex-direction: column;
     top: 0px;
+    left: 820px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    gap: 50px;
+    background-color:white;
+}
+.circ_2 button{
+    opacity: 0;
+}
+.circ_3{
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    gap: 50px;
+    left: 950px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+.circ_3 button{
+    opacity: 0;
+}
+.circ_4{
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    gap: 50px;
+    left: 1070px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ_4 button{
+    opacity: 0;
+}
+.circ_5{
+    left: 1190px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: 0px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ_5 button{
+    opacity: 0;
+}
+.circ_6{
+    left: 1070px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: -130px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ_6 button{
+    opacity: 0;
+}
+.circ_7{
+    left: 1190px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: -130px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ_7 button{
+    opacity: 0;
+}
+.circ1_1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: 200px;
+    left:800px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ1_1 button{
+    opacity: 0;
+}
+.circ1_2{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: 200px;
     left: 920px;
     border: 1px solid white;
     position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background-color:white;
-}
-.circ_3{
-    top: 0px;
-    left: 1050px;
-    border: 1px solid white;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-}
-.circ_4{
-    top: 0px;
-    left: 1170px;
-    border: 1px solid white;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
     background-color: red;
 }
-.circ_5{
-    left: 1290px;
-    top: 0px;
-    border: 1px solid white;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-.circ1_1{
-    top: 200px;
-    left: -100px;
-    border: 1px solid white;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-.circ1_2{
-    top: 200px;
-    left: -240px;
-    border: 1px solid white;
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: red;
+.circ1_2 button{
+    opacity: 0;
 }
 .circ1_3{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     top: 200px;
-    left: -380px;
+    left: 1040px;
     border: 1px solid white;
     position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     background-color: red;
+}
+.circ1_3 button{
+    opacity: 0;
 }
 .circ1_4{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     top: 200px;
-    left: -530px;
+    left: 1160px;
     border: 1px solid white;
     position: absolute;
     border-radius: 50%;
@@ -184,15 +280,56 @@
     height: 100px;
     background-color: red;
 }
+.circ1_4 button{
+    opacity: 0;
+}
 .circ1_5{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     top:200px;
-    left: -680px;
+    left: 1280px;
     border: 1px solid white;
     position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     background-color: red;
+}
+.circ1_5 button{
+    opacity: 0;
+}
+.circ1_6{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top:80px;
+    left: 1160px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ1_6 button{
+    opacity: 0;
+}
+.circ1_7{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top:80px;
+    left: 1280px;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circ1_7 button{
+    opacity: 0;
 }
 .wave-group1 .input1 {
     position: absolute;
@@ -250,5 +387,32 @@
     color: white;
     position: absolute;
     left: 10px;
-    bottom: 0;
+    top: 0;
+  }
+  .button_1{
+    position: absolute;
+    color: white;
+    width: 60px;
+    border: 1px solid white;
+    left: 10px;
+    background-color: green;
+    bottom: 120px;
+  }
+  .button_2{
+    position: absolute;
+    color: white;
+    width: 60px;
+    border: 1px solid white;
+    left: 10px;
+    background-color: green;
+    bottom: 80px;
+  }
+  .button_3{
+    position: absolute;
+    color: white;
+    width: 60px;
+    border: 1px solid white;
+    left:10px;
+    background-color: green;
+    bottom: 40px;
   }

@@ -93,7 +93,10 @@ export class HomeComponent{
   falta2:number = 0;
   buttonColor:string = 'green';
   buttonColor1:string = 'green';
-  
+  counterRed:number = 0;
+  redCircleVisible:boolean = false;
+  counterRed1:number = 0;
+  redCircleVisible1:boolean = false;
   
   
   OcultarFalta(){
@@ -188,6 +191,19 @@ export class HomeComponent{
     } else {
       this.falta1 = 0;
     }
+
+    if (this.counterRed === 5) {
+      this.redCircleVisible = false;
+    }
+
+    if (this.counterRed < 5) {
+      this.counterRed += 1;
+    }
+
+    if (this.falta1 === 5) {
+      this.redCircleVisible = true;
+    }
+
    }
    Faltas1Dec(){
     if (this.falta1 > 0) {
@@ -199,6 +215,17 @@ export class HomeComponent{
       this.falta2 += 1;
     } else {
       this.falta2 = 0;
+    }
+    if (this.counterRed1 === 5) {
+      this.redCircleVisible1 = false;
+    }
+
+    if (this.counterRed1 < 5) {
+      this.counterRed1 += 1;
+    }
+
+    if (this.falta2 === 5) {
+      this.redCircleVisible1 = true;
     }
    }
    Faltas2Dec(){
@@ -235,7 +262,23 @@ export class HomeComponent{
       if (this.periodo < 4) {
         this.periodo += 1;
       } else {
-        this.periodo = 0;
+        this.periodo = 1;
+      }
+      if (this.periodo === 2) {
+        this.buttonColor = 'green';
+        this.buttonColor1 = 'green';
+      }
+      if (this.periodo === 3) {
+        this.buttonColor = 'green';
+        this.buttonColor1 = 'green';
+      }
+      if (this.periodo === 4) {
+        this.buttonColor = 'green';
+        this.buttonColor1 = 'green';
+      }
+      if (this.periodo === 5) {
+        this.buttonColor = 'green';
+        this.buttonColor1 = 'green';
       }
    }
    perioDec(){

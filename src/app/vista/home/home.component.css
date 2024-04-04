@@ -194,14 +194,15 @@
     bottom: 20px;
     border: 2px solid white;
 }
-.buttons_conta{
-    position: absolute;
-    bottom: 40px;
-
-}
+/* .buttons_conta{
+/
+} */
 .Button_minut1 {
-    width: 100px;
+    position: absolute;
+    top: 755px;
+    left:1330px;
     background-color: black;
+    width: 100px;
     height: 40px;
     color: white;
     margin: 10px;
@@ -210,6 +211,9 @@
     border: 2px solid white;
 }
 .Button_minut2 {
+    position: absolute;
+    top: 765px;
+    left: 50px;
     width: 100px;
     background-color: black;
     height: 40px;
@@ -310,4 +314,37 @@
     font-weight: bold;
     right: 10px;
 }
-
+.circ{
+    background-color: red;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 170px;
+    left: 320px;
+    border: 1px solid white;
+}
+.circ1{
+    background-color: red;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 170px;
+    right: 360px;
+    border: 1px solid white;
+}
+@keyframes redt{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.red-animation{
+    animation: redt 1s infinite;
+}

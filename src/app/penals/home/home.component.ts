@@ -34,8 +34,190 @@ export class HomeComponent {
   backColor18:string = 'white';
   backColor19:string = 'white';
   backColor20:string = 'white';
-  visibCirc:boolean = false;
-  visibCirc1:boolean = false;
+  backColor21:string = 'white';
+  backColor22:string = 'white';
+  backColor23:string = 'white';
+  backColor24:string = 'white';
+  visibCirc2:boolean = false;
+  visibCirc5:boolean = false;
+  visibCirc7:boolean = false;
+
+  colorVerde(){
+    this.backColor1 = 'green';
+    this.contador += 1;
+  }
+  colorRojo(){
+    this.backColor1 = 'red';
+  }
+  colorVerde1(){
+    this.backColor2 = 'green';
+    this.contador += 1;
+  }
+  colorRojo1(){
+    this.backColor2 = 'red';
+  }
+  colorVerde2(){
+    this.backColor3 = 'green';
+    this.contador += 1;
+  }
+  colorRojo2(){
+    this.backColor3 = 'red';
+  }
+  colorVerde3(){
+    this.backColor4 = 'green';
+    this.contador += 1;
+  }
+  colorRojo3(){
+    this.backColor4 = 'red';
+  }
+  colorVerde4(){
+    this.backColor5 = 'green';
+    this.contador += 1;
+  }
+  colorRojo4(){
+    this.backColor5 = 'red';
+  }
+  colorVerde5(){
+    this.backColor11 = 'green';
+    this.contador += 1;
+  }
+  colorRojo5(){
+    this.backColor11 = 'red';
+  }
+  colorVerde6(){
+    this.backColor12 = 'green';
+    this.contador += 1;
+  }
+  colorRojo6(){
+    this.backColor12 = 'red';
+  }
+  colorVerde7(){
+    this.backColor13 = 'green';
+    this.contador += 1;
+  }
+  colorRojo7(){
+    this.backColor13 = 'red';
+  }
+  colorVerde8(){
+    this.backColor14 = 'green';
+    this.contador += 1;
+  }
+  colorRojo8(){
+    this.backColor14 = 'red';
+  }
+  colorVerde9(){
+    this.backColor15 = 'green';
+    this.contador += 1;
+  }
+  colorRojo9(){
+    this.backColor15 = 'red';
+  }
+  colorVerde21(){
+    this.backColor21 = 'green';
+    this.contador += 1;
+  }
+  colorRojo21(){
+    this.backColor21 = 'red';
+  }
+  colorVerde22(){
+    this.backColor22 = 'green';
+    this.contador += 1;
+  }
+  colorRojo22(){
+    this.backColor22 = 'red';
+  }
+
+
+
+
+  colorVerde10(){
+    this.backColor6 = 'green';
+    this.contador1 += 1;
+  }
+  colorRojo10(){
+    this.backColor6 = 'red';
+  }
+  colorVerde11(){
+    this.backColor7 = 'green';
+    this.contador1 += 1;
+  }
+  colorRojo11(){
+    this.backColor7 = 'red';
+  }
+   colorVerde12(){
+     this.backColor8 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo12(){
+     this.backColor8 = 'red';
+   }
+   colorVerde13(){
+     this.backColor9 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo13(){
+     this.backColor9 = 'red';
+   }
+   colorVerde14(){
+     this.backColor0 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo14(){
+     this.backColor0 = 'red';
+   }
+  colorVerde15(){
+    this.backColor16 = 'green';
+    this.contador1 += 1;
+  }
+  colorRojo15(){
+    this.backColor16 = 'red';
+  }
+   colorVerde16(){
+     this.backColor17 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo16(){
+     this.backColor17 = 'red';
+   }
+   colorVerde17(){
+     this.backColor18 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo17(){
+     this.backColor18 = 'red';
+   }
+   colorVerde18(){
+     this.backColor19 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo18(){
+     this.backColor19 = 'red';
+   }
+   colorVerde19(){
+     this.backColor20 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo19(){
+     this.backColor20 = 'red';
+   }
+   colorVerde23(){
+     this.backColor23 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo23(){
+     this.backColor23 = 'red';
+   }
+   colorVerde24(){
+     this.backColor24 = 'green';
+     this.contador1 += 1;
+   }
+   colorRojo24(){
+     this.backColor24 = 'red';
+   }
+
+
+
+
 
   constructor(private route: ActivatedRoute){
     this.route.queryParams.subscribe(params =>{
@@ -46,11 +228,14 @@ export class HomeComponent {
     })
 
   }
-  visibleCi(){
-    this.visibCirc = true;
+  visibleCi2(){
+    this.visibCirc2 = true;
   }
-  visibleCi1(){
-    this.visibCirc1 = true;
+  visibleCi5(){
+    this.visibCirc5 = true;
+  }
+  visibleCi7(){
+    this.visibCirc7 = true;
   }
 
   conta1(){
@@ -81,215 +266,12 @@ export class HomeComponent {
    @HostListener('document:keydown', ['$event'])
    hand(event: KeyboardEvent){
     switch (event.key){
-      case '1':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor1 = 'green';
-        }
-        break;
-      case '2':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor2 = 'green';
-        }
-        break;
-      case '3':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor3 = 'green';
-        }
-        break;
-      case '4':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor4 = 'green';
-        }
-        break;
-      case '5':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor5 = 'green';
-        }
-        break;
-      case '6':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor11 = 'green';
-        }
-        break;
-      case '7':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor12 = 'green';
-        }
-        break;
-      case '8':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor13 = 'green';
-        }
-        break;
-      case '9':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor14 = 'green';
-        }
-        break;
-      case '0':
-        if (!event.ctrlKey) {
-          this.contador += 1; 
-          this.backColor15 = 'green';
-        }
-        break;
-      case 'a':
-        if (!event.ctrlKey) {
-          this.contador1 += 1; 
-          this.backColor6 = 'green';
-        }
-        break;
-      case 's':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor7 = 'green'
-        }
-        break;
-      case 'd':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor8 = 'green';
-        }
-        break;
-      case 'f':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor9 = 'green';
-        }
-        break;
-      case 'g':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor0 = 'green'
-        }
-        break;
-      case 'h':
-        if (!event.ctrlKey) {
-          this.contador1 += 1; 
-          this.backColor16 = 'green';
-        }
-        break;
-      case 'j':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor17 = 'green'
-        }
-        break;
-      case 'k':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor18 = 'green';
-        }
-        break;
-      case 'l':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor19 = 'green';
-        }
-        break;
-      case 'm':
-        if (!event.ctrlKey) {
-          this.contador1 += 1;
-          this.backColor20 = 'green'
-        }
-        break;
       case 'z':
         this.decre1();
         break;
       case 'x':
         this.decre2();
         break;
-      case 'c':
-        this.visibleCi();
-        this.visibleCi1();
-        break;
     }
-    if (event.ctrlKey) {
-      switch(event.key) {
-        case '1':
-          this.backColor1 = 'red';
-          event.preventDefault();
-          break;
-        case '2':
-          this.backColor2 = 'red';
-          event.preventDefault();
-          break;
-        case '3':
-          this.backColor3 = 'red';
-          event.preventDefault();
-          break;
-        case '4':
-          this.backColor4 = 'red';
-          event.preventDefault();
-          break;
-        case '5':
-          this.backColor5 = 'red';
-          event.preventDefault();
-          break;
-        case 'a':
-          this.backColor6 = 'red';
-          event.preventDefault();
-          break;
-        case 's':
-          this.backColor7 = 'red';
-          event.preventDefault();
-          break;
-        case 'd':
-          this.backColor8 = 'red';
-          event.preventDefault();
-          break;
-        case 'f':
-          this.backColor9 = 'red';
-          event.preventDefault();
-          break;
-        case 'g':
-          this.backColor0 = 'red';
-          event.preventDefault();
-          break;
-        case '6':
-          this.backColor11 = 'red';
-          break;
-        case '7':
-          this.backColor12 = 'red';
-          break;
-        case '8':
-          this.backColor13 = 'red';
-          break;
-        case '9':
-          this.backColor14 = 'red';
-          break;
-        case '0':
-          this.backColor15 = 'red';
-          break;
-        case 'h':
-          this.backColor16 = 'red';
-          event.preventDefault();
-          break;
-        case 'j':
-          this.backColor17 = 'red';
-          event.preventDefault();
-          break;
-        case 'k':
-          this.backColor18 = 'red';
-          event.preventDefault();
-          break;
-        case 'l':
-          this.backColor19 = 'red';
-          event.preventDefault();
-          break;
-        case 'm':
-          this.backColor20 = 'red';
-          event.preventDefault();
-          break;
-      }
-   }
   }
 }
